@@ -27,6 +27,12 @@ int main()
         {
             bn::backdrop::set_color(bn::color(1, 15, 15));
         }
+
+        if (bn::keypad::r_held())
+        {
+            bn::backdrop::set_color(bn::color(31, 31, 1));
+        }
+
         bn::core::update();
     }
 }
