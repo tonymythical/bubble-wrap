@@ -9,12 +9,21 @@ int main()
 {
     bn::core::init();
     bn::backdrop::set_color(bn::color(31, 12, 12));
-    bn::sprite_ptr myCircle = bn::sprite_items::dot.create_sprite(20, -10);
-    bn::sprite_ptr myCircle2 = bn::sprite_items::dot.create_sprite(-20, -10);
-    bn::sprite_ptr myCircle3 = bn::sprite_items::dot.create_sprite(25, 30);
-    bn::sprite_ptr myCircle4 = bn::sprite_items::dot.create_sprite(-25, 30);
-    bn::sprite_ptr myCircle5 = bn::sprite_items::dot.create_sprite(0, 35);
+    // bn::sprite_ptr myCircle = bn::sprite_items::dot.create_sprite(20, -10);
+    // bn::sprite_ptr myCircle2 = bn::sprite_items::dot.create_sprite(-20, -10);
+    // bn::sprite_ptr myCircle3 = bn::sprite_items::dot.create_sprite(25, 30);
+    // bn::sprite_ptr myCircle4 = bn::sprite_items::dot.create_sprite(-25, 30);
+    // bn::sprite_ptr myCircle5 = bn::sprite_items::dot.create_sprite(0, 35);
 
+    bn::sprite_ptr myCircle = bn::sprite_items::dot.create_sprite(-40, 40);
+    bn::sprite_ptr myCircle2 = bn::sprite_items::dot.create_sprite(-30, 40);
+    bn::sprite_ptr myCircle3 = bn::sprite_items::dot.create_sprite(-20, 40);
+    bn::sprite_ptr myCircle4 = bn::sprite_items::dot.create_sprite(-10, 40);
+    bn::sprite_ptr myCircle5 = bn::sprite_items::dot.create_sprite(0, 40);
+    bn::sprite_ptr myCircle6 = bn::sprite_items::dot.create_sprite(10, 40);
+    bn::sprite_ptr myCircle7 = bn::sprite_items::dot.create_sprite(20, 40);
+    bn::sprite_ptr myCircle8 = bn::sprite_items::dot.create_sprite(30, 40);
+    bn::sprite_ptr myCircle9 = bn::sprite_items::dot.create_sprite(40, 40);
 
 
     while (true)
