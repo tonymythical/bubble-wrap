@@ -8,7 +8,6 @@
 #include <bn_vector.h>
 #include <bn_math.h>
 #include <bn_fixed.h>
-#include <cmath>
 
 int main()
 {
