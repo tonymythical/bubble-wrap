@@ -4,6 +4,8 @@
 #include <bn_keypad.h>
 #include <bn_sprite_ptr.h>
 #include <bn_sprite_items_dot.h>
+#include <bn_log.h>
+#include <bn_vector.h>
 
 int main()
 {
@@ -15,16 +17,23 @@ int main()
     // bn::sprite_ptr myCircle4 = bn::sprite_items::dot.create_sprite(-25, 30);
     // bn::sprite_ptr myCircle5 = bn::sprite_items::dot.create_sprite(0, 35);
 
-    bn::sprite_ptr myCircle = bn::sprite_items::dot.create_sprite(-40, 40);
-    bn::sprite_ptr myCircle2 = bn::sprite_items::dot.create_sprite(-30, 40);
-    bn::sprite_ptr myCircle3 = bn::sprite_items::dot.create_sprite(-20, 40);
-    bn::sprite_ptr myCircle4 = bn::sprite_items::dot.create_sprite(-10, 40);
-    bn::sprite_ptr myCircle5 = bn::sprite_items::dot.create_sprite(0, 40);
-    bn::sprite_ptr myCircle6 = bn::sprite_items::dot.create_sprite(10, 40);
-    bn::sprite_ptr myCircle7 = bn::sprite_items::dot.create_sprite(20, 40);
-    bn::sprite_ptr myCircle8 = bn::sprite_items::dot.create_sprite(30, 40);
-    bn::sprite_ptr myCircle9 = bn::sprite_items::dot.create_sprite(40, 40);
+    // bn::sprite_ptr myCircle = bn::sprite_items::dot.create_sprite(-40, 40);
+    // bn::sprite_ptr myCircle2 = bn::sprite_items::dot.create_sprite(-30, 40);
+    // bn::sprite_ptr myCircle3 = bn::sprite_items::dot.create_sprite(-20, 40);
+    // bn::sprite_ptr myCircle4 = bn::sprite_items::dot.create_sprite(-10, 40);
+    // bn::sprite_ptr myCircle5 = bn::sprite_items::dot.create_sprite(0, 40);
+    // bn::sprite_ptr myCircle6 = bn::sprite_items::dot.create_sprite(10, 40);
+    // bn::sprite_ptr myCircle7 = bn::sprite_items::dot.create_sprite(20, 40);
+    // bn::sprite_ptr myCircle8 = bn::sprite_items::dot.create_sprite(30, 40);
+    // bn::sprite_ptr myCircle9 = bn::sprite_items::dot.create_sprite(40, 40);
 
+    bn::vector<bn::sprite_ptr, 10> circles = {};
+
+    for(int x = -40; x <= 40; x += 10) {
+        bn::sprite_ptr myCircle = bn::sprite_items::dot.create_sprite(x, 40);
+        BN_LOG("x value", x);
+        circles.push_back(myCircle);
+    }
 
     while (true)
     {
