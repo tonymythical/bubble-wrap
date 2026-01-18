@@ -6,11 +6,15 @@
 #include <bn_sprite_items_dot.h>
 #include <bn_log.h>
 #include <bn_vector.h>
+#include <bn_math.h>
+#include <bn_fixed.h>
+#include <cmath>
 
 int main()
 {
     bn::core::init();
     bn::backdrop::set_color(bn::color(31, 12, 12));
+  
     // bn::sprite_ptr myCircle = bn::sprite_items::dot.create_sprite(20, -10);
     // bn::sprite_ptr myCircle2 = bn::sprite_items::dot.create_sprite(-20, -10);
     // bn::sprite_ptr myCircle3 = bn::sprite_items::dot.create_sprite(25, 30);
@@ -32,6 +36,11 @@ int main()
     for(int x = -40; x <= 40; x += 10) {
         bn::sprite_ptr myCircle = bn::sprite_items::dot.create_sprite(x, 40);
         BN_LOG("x value", x);
+        
+        bn::fixed degrees = bn::fixed(x * 4);
+        bn::fixed angle = degrees * bn::fixed(2) / 180;
+        
+        myCircle.set_position(bn::sin(angle) * 40, bn::cos(angle) * 40);
         circles.push_back(myCircle);
     }
 
